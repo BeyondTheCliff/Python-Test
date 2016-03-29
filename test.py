@@ -24,19 +24,13 @@ a=[]
 b=[]
 c=[]
 time=[]
-XVAR=[]
-YVAR=[]
 objects=[a,b,c,time]
 limit=61
+a[0].speed=10
 for x in xrange(1,limit):
    time.append(x)
-   a.append(Update(1,10*x,0-x))
-   b.append(Update(2,10*x,0-x))
-   c.append(Trig(x,limit/(math.pi*2),0))
-   XVAR=c[x-1].outputX
-   YVAR=c[x-1].outputY
-   print str(c[x-1].outputX) + " : " + str(c[x-1].outputY)
-   print
+   a.append(Update(10,1,a[x-1].speed))
+   print str(a[x-1].speed)
 
-plt.plot(XVAR,YVAR,'r--')
+plt.plot(time,a,'r--')
 plt.show()

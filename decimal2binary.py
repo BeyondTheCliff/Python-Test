@@ -1,6 +1,7 @@
 def D2B(number):
 	import math
-
+	if number.isdigit():
+		number=5
 	binary = []
 	iterations = 0
 	
